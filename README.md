@@ -1,2 +1,1 @@
-# display-the-group-items-count-in-the-group-of-.net-maui-listview
-How to display the group items count in the group header of .NET MAUI ListView (SfListView) ?
+**[View document in Syncfusion .NET MAUI Knowledge Base](https://www.syncfusion.com/kb/13164/how-to-display-the-group-items-count-in-the-group-header-of-net-maui-listview-sflistview)**
