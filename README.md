@@ -1,48 +1,11 @@
-**[View document in Syncfusion .NET MAUI Knowledge Base](https://www.syncfusion.com/kb/13164/how-to-display-the-group-items-count-in-the-group-header-of-net-maui-listview-sflistview)**
+# How to display the group items count in the group header of .NET MAUI ListView (SfListView) ?
 
-## Sample
+In [.NET MAUI ListView (SfListView)](https://www.syncfusion.com/maui-controls/maui-listview), you can display the items count for each group in the group header item by customizing the [GroupHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html?_gl=1*1w6hc2d*_ga*MTA0NjY4OTQ1Ni4xNjAwMDYxMjYy*_ga_WC4JKKPHH0*MTY1MDk3NTk1Ni4xNTgzLjEuMTY1MDk4MzYzMS4w&amp;_ga=2.218493465.163092699.1650859873-1046689456.1600061262#Syncfusion_Maui_ListView_SfListView_GroupHeaderTemplate).
 
-```xaml
-<listView:SfListView x:Name="listView" 
-                             ItemSize="70" 
-                             GroupHeaderSize="60" 
-                             AllowGroupExpandCollapse="True"
-                             ItemsSource="{Binding ContactsInfo}">
+To display the total number of items in each group, you can bind the [Count](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataSource.Extensions.GroupResult.html#Syncfusion_Maui_DataSource_Extensions_GroupResult_Count) property in the GroupHeaderTemplate.
 
-    <listView:SfListView.DataSource>
-        <dataSource:DataSource>
-            <dataSource:DataSource.GroupDescriptors>
-                <dataSource:GroupDescriptor PropertyName="Age"/>
-            </dataSource:DataSource.GroupDescriptors>
-        </dataSource:DataSource>
-    </listView:SfListView.DataSource>
+[View sample in GitHub](https://github.com/SyncfusionExamples/display-the-group-items-count-in-the-group-of-.net-maui-listview)
 
-    <listView:SfListView.GroupHeaderTemplate>
-        <DataTemplate>
-           <Grid BackgroundColor="#E4E4E4">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" Padding="10,0,0,0">
-                    <Label Text="{Binding Key}" TextColor="Black" FontSize="Medium"/>
-                    <Label Text="Year" TextColor="Black" FontSize="Medium"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" Grid.Column="1" Padding="0,0,20,0" HorizontalOptions="EndAndExpand" VerticalOptions="Center">
-                    <Label Text="{Binding Count}" TextColor="Black" FontSize="Medium"/>
-                    <Label Text="Item(s)" TextColor="Black" FontSize="Medium"/>
-                </StackLayout>
-            </Grid>
-        </DataTemplate>
-    </listView:SfListView.GroupHeaderTemplate>
+![Display items count in the GroupHeader of .NET MAUI ListView (SfListView)](https://www.syncfusion.com/uploads/user/kb/maui/maui-2050/maui-2050_img1.png)
 
-    <listView:SfListView.ItemTemplate>
-        <DataTemplate>
-            <code>
-            . . .
-            . . .
-            <code>
-        </DataTemplate>
-    </listView:SfListView.ItemTemplate>
-</listView:SfListView>
-```
+Take a moment to peruse the [documentation](https://help.syncfusion.com/maui/listview/grouping#group-header-customization) to learn more about group header customization in SfListView with code example.
